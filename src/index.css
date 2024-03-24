@@ -1,13 +1,68 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+}
+:root{
+  --darkColor:#000;
+  --lightcolor:#fff;
+
+}
+body{
+
+  background-color: var(--lightcolor) !important;
+  color: var(--darkColor) !important;
+
+}
+.light{
+  background-color: var(--darkColor) !important;
+  color: var(--lightcolor) !important;
+}
+body.light .navbar {
+  background-color: #333;
+}
+body .navbar{
+  background-color: #f8f9fa; /* Change background color to light gray in light mode */
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.darkmode{
+  font-size: 20px;
+  cursor: pointer;
+  width: fit-content;
+}
+.navbar-nav a{
+  font-size: 20px;
+}
+.navbar-nav .nav-link {
+  color: #000; /* Change link color to white */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ccc; /* Change link hover color to light gray */
+}
+
+/* Dark mode */
+
+body.light .navbar-nav .nav-link {
+  color: #fff; /* Change link color to dark gray in light mode */
+}
+body .navbar .navbar-toggler{
+  background-color: #fff;
+}
+body.light .navbar-nav .nav-link:hover {
+  color: #ffc107; /* Change link hover color to medium gray in light mode */
+}
+.navbar-nav .nav-link:hover {
+  color: #45c8f1; /* Change link hover color to medium gray in light mode */
+}
+
+body.light .navbar-brand {
+  color: var(--darkColor);
+}
+body .navbar-brand {
+  color: var(--lightcolor);
+}
+body .logo{
+  /* background: #f8f9fa; */
+  border-radius: 50%;
 }

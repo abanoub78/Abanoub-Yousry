@@ -1,38 +1,432 @@
-.App {
-  text-align: center;
+.logo{
+  width: 70px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.abanoub{
+  color: white !important;
+  font-size: 20px !important;
+  font-weight: bold !important;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.cont{
+  height: calc(100vh - 1rem);
+  width: 80vw;
+  max-width:93rem ;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  /* display: flex;
+  align-items: center; */
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.cont .myimg{
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  object-fit: cover;
+  height: 100vh;
+  padding-top: 65px;
+}
+.cont .left{
+  height: 100vh;
+  width: 100vw;
+  font-weight: 800;
+  font-size: 3rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.cont .left .hello{
+  font-size: 2rem;
+  font-weight: 300;
+
+}
+body.light .cont .left .name{
+  color: #ffc107 ;
+}
+.cont .left .name{
+  color: #45c8f1 ;
+}
+.cont .left .info{
+  font-size: 15px;
+  font-weight: 300;
+  
+}
+.ws{
+  width: fit-content;
+  border-radius: 30px;
+}
+.links{
+  display: flex;
+  gap: 20px;
+  padding-bottom: 15px;
+}
+body.light .links button{
+  background: transparent;
+  border: none;
+font-size: 20px;
+background-color: #ffc107;
+width: fit-content;
+border-radius: 50%;
+}
+.links button{
+  background: transparent;
+  border: none;
+font-size: 25px;
+width: fit-content;
+border-radius: 50%;
+transition: 0.3s;
+}
+.links button i:hover{
+  font-size: 30px;
+}
+
+.cv a{
+  text-decoration: none;
+  color: black;
+}
+.cv a:hover{
+  color: #f8f9fa;
+}
+.cv{
+  width: fit-content;
+  font-size: 20px;
+  padding: 7px;
+  background: #45c8f1;
+  font-weight: bold;
+  border-radius: 15px;
+  border: none;
+}
+body.light .cv{
+  width: fit-content;
+  font-size: 20px;
+  padding: 5px;
+  background: #ffc107;
+  font-weight: bold;
+  border-radius: 15px;
+  border: none;
+}
+.mynav{
+  position: fixed !important;
+  width: 100% !important;
+  z-index: 10000 !important;
+}
+/***************************/
+.title{
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+.projects{
+  display: flex;
+  gap: 3rem;
+  padding: 30px;
+  
+}
+.projects .right{
+  /* flex-grow: 1; */
+  /* display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
+  flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+
+}
+.projects .left{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+body.light  .projects .left button{
+  background-color: rgba(36, 37, 46,1);
+  width: 11rem;
+  padding: 10px;
   color: white;
+  border-radius: 15px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.projects .left button{
+  background-color: #f8f9fa;
+  width: 11rem;
+  padding: 10px;
+  color: black;
+  border-radius: 15px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.projects .left button:hover{
+  opacity: 0.8;
+
+}
+body.light .projects .active{
+  border: 5px solid #ffc107;
+}
+.projects .active{
+  border: 5px solid #45c8f1;
+}
+.projects .card img{
+  width: 300px;
+  height: 200px;
+}
+body.light .projects .card{
+  background-color: black;
+  color: white;
+  border: 2px solid rgba(93, 188, 252, 0.3);
+  transition: 0.3s;
+}
+body.light .projects .card:hover{
+  border: 2px solid #ffc107;
+  rotate: 1deg;
+  scale: 1.01;
+  cursor: pointer;
+}
+.projects .card:hover{
+  border: 2px solid #45c8f1;
+  rotate: 1deg;
+  scale: 1.01;
+  cursor: pointer;
+}
+.projects .card:hover{
+  border: 2px solid #45c8f1;
+  rotate: 1deg;
+  scale: 1.01;
+  cursor: pointer;
+}
+.projects .card .box{
+  width: 300px;
+  height: 220px;
+  padding: 10px;
+}
+.projects .card .box p{
+  height: 60%;
+}
+body.light .projects .card .box .pro{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  text-decoration: none;
+  color: black;
+  font-weight:bold;
+  border-radius: 10px;
+  background: #ffc107;
+}
+.projects .card .box .pro{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  text-decoration: none;
+  color: black;
+  font-weight:bold;
+  border-radius: 10px;
+  background: #45c8f1;
+}
+@media (max-width: 767px){
+  .cont .myimg{
+    right: -300px !important;
+  }
+  .cont .left {
+    height: 114vh;
+    width: 54vw;
+    font-weight: 800;
+    font-size: 2rem;
+  }
+  }
+  @media (max-width: 600px){
+    .projects{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .projects .left{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    }
+    /*****************************/
+    .contact{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .contact .left{
+      padding-bottom: 20px;
+    }
+    .contact form{
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+    }
+    .contact form div{
+      display: flex;
+      gap: 20px;
+    }
+
+    .contact form input{
+      background-color: rgba(63, 63, 70, 0.15);
+      border-radius: 15px;
+      width: 68%;
+    padding: 10px;
+    color: white;
 }
 
-.App-link {
-  color: #61dafb;
+    
+ .contact form textarea{
+  background-color: rgba(63, 63, 70, 0.15);
+  border-radius: 10px;
+  width: 300px;
+  height: 180px;
+  color: white;
+      
+    }
+    .contact form textarea:focus,
+    .contact form input:focus
+      {
+        border: 5px solid #45c8f1 !important;
+      }
+      body.light .contact form textarea:focus,
+      body.light .contact form input:focus
+        {
+          border: 5px solid #ffc107 !important;
+        }
+body.light .submit{
+  border-radius: 20px;
+  font-size: 22px;
+  font-weight: bold;
+  background-color: #ffc107;
+}
+.submit{
+  border-radius: 20px;
+  font-size: 22px;
+  font-weight: bold;
+  background-color: #45c8f1;
+  border: none;
+}
+.submit:hover{
+  opacity: 0.7;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+body.light .footer{
+  background-color: #333;
+  color: white;
+
+}
+
+body.light .contactMsg{
+  font-size: 20px;
+  text-align: center;
+  padding: 30px;
+  background: #ffc107;
+  font-weight: bold;
+color: #333;
+}
+.contactMsg{
+  font-size: 20px;
+  text-align: center;
+  padding: 30px;
+  background: #45c8f1;
+  font-weight: bold;
+color: #333;
+}
+.footer{
+  background-color: #f8f9fa;
+  color: black;
+
+}
+.footer p{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 0px;
+  padding: 15px;
+}
+
+  /***************************************/
+
+  .about{
+    display: flex;
+    gap: 30px;
+    
+
   }
-  to {
-    transform: rotate(360deg);
+  .about img{
+    width: 300px;
+  }
+  .about h5{
+    padding-bottom: 30px;
+    color: #737373;
+  }
+  .about .skills{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .home .left .name{
+    position: relative;
+  }
+  body.light .home .left .name::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-left: 1px solid #ffc107;
+  background-color: black;
+  overflow: hidden;
+  animation:typing 2.5s steps(50) infinite;
+  
+}
+.home .left .name::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-left: 1px solid #45c8f1;
+  background-color: white;
+  overflow: hidden;
+  animation:typing 5.5s steps(1) infinite;
+  
+}
+@keyframes typing{
+  100%{
+    left: 100%;
+    /* margin: 0 -35px 0 -35px; */
   }
 }
+  @media (max-width: 600px){
+    .contact img{
+      display: none;
+    }
+    .contact form input {
+      width: 100%;
+    }
+    .contact form textarea {
+      width: 250px;
+    }
+    .footer p{
+      font-size: 14px;
+    }
+    .about img{
+      display: none;
+    }
+  
+    }
+    @media (max-width: 1800px){
+      body.light .home .left .name::after{
+        display: none;
+          
+        }
+        .home .left .name::after{
+          display: none;
+            
+          }
+    }
